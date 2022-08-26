@@ -1,16 +1,7 @@
-import { useState, useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
 import data from "./data";
-import { fetchPokemonSidebar } from "./apiCalls/fetchPokemonSidebar";
 
 function App() {
-  const [activePokemon, setActivePokemon] = useState({});
-  const [sidebarPokemon, setSidebarPokemon] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  
-  if(isLoading) return <div>loading..</div>
-
   return (
     <div className="flex w-screen h-screen bg-gray-100">
       <Sidebar />
